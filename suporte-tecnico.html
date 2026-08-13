@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Support | Dalton Neres</title>
+
+  <!-- SEO -->
+  <meta name="description"
+    content="Quick and reliable technical support: iPhone recovery, virus removal, Android unlocking and complete computer formatting.">
+  <meta name="author" content="Dalton Neres">
+  <meta property="og:title" content="Technical Support | Dalton Neres">
+  <meta property="og:description" content="iPhone recovery, virus removal, Android unlocking and complete computer formatting.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ─── NAVBAR ─────────────────────────────────────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Menu principal">
+    <a href="index.html#hero" class="nav-logo">DN<span>.</span></a>
+
+    <button id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+    <ul id="navMenu">
+      <li><a href="#servicos" class="nav-link">Services</a></li>
+      <li><a href="#faq" class="nav-link">Frequently Asked Questions</a></li>
+      <li><a href="index.html#projetos" class="nav-link">Development Portfolio</a></li>
+      <li><a href="#contato" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── HERO ────────────────────────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <h1>
+      TECHNICAL <br>
+      SUPPORT
+    </h1>
+
+    <p class="subtitle">
+      Quick and reliable technical support for smartphones and computers.
+      Access recovery, virus removal and complete formatting.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#servicos" class="btn-hero primary">View Services ↓</a>
+      <a href="index.html" class="btn-hero secondary">← Back to Portfolio</a>
+    </div>
+  </section>
+
+  <!-- ─── SERVIÇOS TÉCNICOS ──────────────────────────────────────────────────── -->
+  <section class="servicos-cards fade-in" id="servicos">
+    <h2>Services</h2>
+    <p class="subtitle">Choose what you need and let's chat on WhatsApp.</p>
+
+    <div class="cards-container">
+
+      <div class="servico-card">
+        <h3>🍎 iPhone Recovery</h3>
+        <p>Support for unlocking, access recovery and safe reset.</p>
+        <div class="servico-actions">
+          <button class="btn-primary" onclick="abrirModal('iphone')">💬 Request</button>
+        </div>
+      </div>
+
+      <div class="servico-card">
+        <h3>🛡️ Virus Removal</h3>
+        <p>Complete cleaning of viruses and malware with or without formatting.</p>
+        <div class="servico-actions">
+          <button class="btn-primary" onclick="abrirModal('virus')">💬 Request</button>
+        </div>
+      </div>
+
+      <div class="servico-card">
+        <h3>🔓 Android Unlock</h3>
+        <p>Access recovery in devices locked by Google account.</p>
+        <div class="servico-actions">
+          <button class="btn-primary" onclick="abrirModal('android')">💬 Request</button>
+        </div>
+      </div>
+
+      <div class="servico-card">
+        <h3>💻 Complete Formatting</h3>
+        <p>Windows installation, drivers, Office and total system optimization.</p>
+        <div class="servico-actions">
+          <button class="btn-primary" onclick="abrirModal('formatacao')">💬 Request</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── DÚVIDAS FREQUENTES ────────────────────────────────────────────────── -->
+  <section class="filosofia fade-in" id="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="filosofia-cards">
+      <div class="filosofia-card">
+        <h3>How long does it take?</h3>
+        <p>In most cases, the diagnosis is done on the same day. The completion timeline depends on the issue and is agreed upon with you before starting.</p>
+      </div>
+
+      <div class="filosofia-card">
+        <h3>Is my data secure?</h3>
+        <p>Yes. Whenever possible, I back up data before any intervention and treat your information with confidentiality.</p>
+      </div>
+
+      <div class="filosofia-card">
+        <h3>How does the quotation work?</h3>
+        <p>You describe the problem through the form, receive a quick response on WhatsApp with the value and only authorize the service after approval.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA / CONTATO ─────────────────────────────────────────────────────── -->
+  <footer class="footer reveal" id="contato">
+    <h2>Need help now?</h2>
+    <p class="subtitle">Describe the problem and receive a quick response on WhatsApp.</p>
+
+    <div class="social">
+      <a href="https://wa.me/5546999711937" target="_blank" rel="noopener" class="main">📲 Call on WhatsApp</a>
+      <a href="index.html" rel="noopener">← Back to portfolio</a>
+    </div>
+
+    <p class="copy">© 2026 Dalton Neres — All rights reserved</p>
+  </footer>
+
+  <!-- ─── MODAL ─────────────────────────────────────────────────────────────────── -->
+  <div id="modalServico" class="modal" role="dialog" aria-modal="true" aria-labelledby="tituloServico">
+    <div class="modal-content">
+      <button class="fechar" onclick="fecharModal()" aria-label="Fechar modal">×</button>
+
+      <h2 id="tituloServico"></h2>
+
+      <input type="text" id="nome" placeholder="Your name" autocomplete="name">
+      <input type="text" id="modelo" placeholder="Device or computer model">
+      <textarea id="descricao" placeholder="Describe the problem"></textarea>
+
+      <button onclick="enviarWhatsApp()">📲 Send on WhatsApp</button>
+    </div>
+  </div>
+
+  <script src="suporte-script.js"></script>
+
+</body>
+
+</html>
